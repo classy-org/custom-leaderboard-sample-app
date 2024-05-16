@@ -1,0 +1,14 @@
+{
+  "name": "custom_leaderboard",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:local": "concurrently \"cd ui && yarn start\" \"cd server && yarn start\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

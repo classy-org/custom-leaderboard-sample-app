@@ -1,0 +1,13 @@
+# MISC
+.DS_Store
+.env
+
+# Dependency directories
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Yarn 2 - https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
