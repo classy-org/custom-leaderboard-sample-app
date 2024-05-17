@@ -1,0 +1,18 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "main" ]; then
+  echo "Directly pushing code to main is forbidden"
+  exit 1
+fi
+
+echo "Pre-Push: Check Typescript Typing"
+yarn ts:check
+
+echo "Pre-Push: Check Linting"
+yarn eslint:check
+
+echo "Pre-Push: Run Tests"
+yarn test:changed

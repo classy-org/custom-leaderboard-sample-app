@@ -24,7 +24,7 @@ describe('tokenExpirationMiddleware', () => {
     await middleWareModule.tokenExpirationMiddleware(
       mockRequest,
       mockResponse,
-      next,
+      next
     )
 
     expect(next).toHaveBeenCalled()
@@ -38,7 +38,7 @@ describe('tokenExpirationMiddleware', () => {
       .mockReturnValue(
         Promise.resolve({ data: { access_token: 'new_token' } }) as Promise<
           AxiosResponse<authModule.AuthResponse, any>
-        >,
+        >
       )
 
     const mockRequest = {} as Request
@@ -48,7 +48,7 @@ describe('tokenExpirationMiddleware', () => {
     await middleWareModule.tokenExpirationMiddleware(
       mockRequest,
       mockResponse,
-      next,
+      next
     )
 
     expect(authModule.getAccessToken).toHaveBeenCalledTimes(1)
@@ -73,7 +73,7 @@ describe('tokenExpirationMiddleware', () => {
     await middleWareModule.tokenExpirationMiddleware(
       mockRequest,
       mockResponse,
-      next,
+      next
     )
 
     expect(authModule.getAccessToken).toHaveBeenCalledTimes(1)
@@ -90,7 +90,7 @@ describe('tokenExpirationMiddleware', () => {
       .mockReturnValue(
         Promise.resolve({ data: { access_token: 'new_token' } }) as Promise<
           AxiosResponse<authModule.AuthResponse, any>
-        >,
+        >
       )
 
     const mockRequest = {} as Request
@@ -106,7 +106,7 @@ describe('tokenExpirationMiddleware', () => {
     await middleWareModule.tokenExpirationMiddleware(
       mockRequest,
       mockResponse,
-      next,
+      next
     )
 
     expect(next).toHaveBeenCalled()

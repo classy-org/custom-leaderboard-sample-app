@@ -10,7 +10,7 @@ export interface GetOrganizationFundraisingPagesAPIResult
 
 export const getOrganizationFundraisingPages = (
   accessToken: string,
-  sort: string,
+  sort: string
 ): Promise<AxiosResponse<GetOrganizationFundraisingPagesAPIResult>> => {
   return axios.get(
     `${HOST}/${API_VERSION}/organizations/${ORGANIZATION_ID}/fundraising-pages?aggregates=true&with=member&sort=${sort}&limit=5`,
@@ -18,6 +18,6 @@ export const getOrganizationFundraisingPages = (
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
-    },
+    }
   )
 }

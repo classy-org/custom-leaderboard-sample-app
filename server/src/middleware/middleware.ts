@@ -22,7 +22,7 @@ export const tokenStore: TokenStore = {
 export const tokenExpirationMiddleware = async (
   req: Request,
   res: Response,
-  next: NextFunction,
+  next: NextFunction
 ): Promise<any> => {
   // If token is currently being refreshed, wait for it to complete, preventing synchronous frontend requests
   // from triggering an upstream request to get a new access token

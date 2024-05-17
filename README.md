@@ -1,6 +1,6 @@
 # Custom Leaderboard
 
-This is a sample application that demonstrates how to create a custom leaderboard with your Classy data. It should be used purely as instructional material rather than a production-ready application. A great [support article](https://support.classy.org/s/article/building-fundraising-leaderboards-with-the-classy-api) further outlines and walks through what this application achieves. 
+This is a sample application that demonstrates how to create a custom leaderboard with your Classy data. It should be used purely as instructional material rather than a production-ready application. A great [support article](https://support.classy.org/s/article/building-fundraising-leaderboards-with-the-classy-api) further outlines and walks through what this application achieves.
 
 Please refer to Classy's [developer documentation](https://developers.classy.org/overview/welcome) for more information about how to work with our product.
 
@@ -21,7 +21,10 @@ The [UI folder](./ui) contains the React SPA to display the data retrieved from 
 
 ### Local Development
 
-To get started, this application contains two key directories: Server and UI. 
-Add the appropriate variables to the `.env` file in the server directory that correlate with your organization, campaign, and authentication credentials.
+To get started, this application contains two key directories: Server and UI.
+Copy the environment variables from `.template.env` to the `.env` file in the server directory, adding in the values that correlate with your organization, campaign, and authentication credentials.
 
-`cd` into the `server` and `ui` directories before running `nvm use` and `yarn` to install the package dependencies. `cd..` back to the root of the applications and run `yarn start:local` to run the server and client applications in parallel. Both directories will listen to changes and reload the app, applying those changes when they are saved. 
+Run `nvm use` from the root of the project, `cd` into the `server` and `ui` directories and run `yarn` to install the package dependencies. `cd..` back to the root of the applications and run `yarn start:local` to run the server and client applications in parallel. Both directories will listen to changes and reload the app, applying those changes when they are saved.
+
+React's strict mode can cause double renders and, thus, duplicate requests to the backend. For local development, you may want to remove the React.StrictMode wrapper around the React app.
+

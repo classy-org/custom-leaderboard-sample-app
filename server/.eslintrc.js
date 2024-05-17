@@ -1,11 +1,10 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'prettier',
   ],
   env: {
@@ -22,16 +21,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        bracketSpacing: true,
-        tabWidth: 2,
-        trailingComma: 'all',
-        useTabs: false,
-        singleQuote: true,
-      },
-    ],
     // custom rules
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }], // allow for unary operators in loops
     'import/prefer-default-export': 'off', // disabling to allow to keep barrel files more concise and clear

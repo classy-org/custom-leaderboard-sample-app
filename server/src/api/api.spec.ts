@@ -45,7 +45,7 @@ describe('api requests', () => {
           client_id: 'xxxxxxxxxx',
           client_secret: 'yyyyyyyyy',
           grant_type: 'client_credentials',
-        },
+        }
       )
     })
   })
@@ -80,7 +80,7 @@ describe('api requests', () => {
 
       const result = await getCampaignFundraisingPages(
         mockAccessToken,
-        mockSort,
+        mockSort
       )
 
       expect(axios.get).toHaveBeenCalledTimes(1)
@@ -90,7 +90,7 @@ describe('api requests', () => {
           headers: {
             Authorization: `Bearer ${mockAccessToken}`,
           },
-        },
+        }
       )
       expect(result).toEqual({ data: mockResponseData })
       expect(result.data.data.length).toEqual(2)
@@ -114,7 +114,7 @@ describe('api requests', () => {
 
       const result = await getCampaignFundraisingTeams(
         mockAccessToken,
-        mockSort,
+        mockSort
       )
 
       expect(axios.get).toHaveBeenCalledTimes(1)
@@ -124,7 +124,7 @@ describe('api requests', () => {
           headers: {
             Authorization: `Bearer ${mockAccessToken}`,
           },
-        },
+        }
       )
       expect(result).toEqual({ data: mockResponseData })
       expect(result.data.data.length).toEqual(2)
@@ -148,7 +148,7 @@ describe('api requests', () => {
 
       const result = await getOrganizationFundraisingPages(
         mockAccessToken,
-        mockSort,
+        mockSort
       )
 
       expect(axios.get).toHaveBeenCalledTimes(1)
@@ -158,7 +158,7 @@ describe('api requests', () => {
           headers: {
             Authorization: `Bearer ${mockAccessToken}`,
           },
-        },
+        }
       )
       expect(result).toEqual({ data: mockResponseData })
       expect(result.data.data.length).toEqual(2)
@@ -182,7 +182,7 @@ describe('api requests', () => {
 
       const result = await getOrganizationFundraisingTeams(
         mockAccessToken,
-        mockSort,
+        mockSort
       )
 
       expect(axios.get).toHaveBeenCalledTimes(1)
@@ -192,7 +192,7 @@ describe('api requests', () => {
           headers: {
             Authorization: `Bearer ${mockAccessToken}`,
           },
-        },
+        }
       )
       expect(result).toEqual({ data: mockResponseData })
       expect(result.data.data.length).toEqual(2)
