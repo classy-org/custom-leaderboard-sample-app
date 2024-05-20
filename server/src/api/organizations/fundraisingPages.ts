@@ -1,11 +1,10 @@
-import axios, { AxiosResponse } from 'axios'
-import { HOST, API_VERSION, ORGANIZATION_ID } from '../../config'
-import { APIv2FundraisingPage } from '../../../../types/fundraisingPage'
-import { PaginatedResponse } from '../../types/paginatedResponse'
+import axios, { AxiosResponse } from 'axios';
+import { HOST, API_VERSION, ORGANIZATION_ID } from '../../config';
+import { APIv2FundraisingPage } from '../../../../common/types/fundraisingPage';
+import { PaginatedResponse } from '../../types/paginatedResponse';
 
-export interface GetOrganizationFundraisingPagesAPIResult
-  extends PaginatedResponse {
-  data: APIv2FundraisingPage[]
+export interface GetOrganizationFundraisingPagesAPIResult extends PaginatedResponse {
+  data: APIv2FundraisingPage[];
 }
 
 export const getOrganizationFundraisingPages = (
@@ -19,5 +18,5 @@ export const getOrganizationFundraisingPages = (
         Authorization: `Bearer ${accessToken}`,
       },
     }
-  )
-}
+  );
+};

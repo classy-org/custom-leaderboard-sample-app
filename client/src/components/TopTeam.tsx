@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card } from './Card'
-import { APIv2FundraisingTeam } from '../../../types/fundraisingTeam'
+import { APIv2FundraisingTeam } from '../../../common/types/fundraisingTeam'
 import { formatAsCurrency } from '../utils/utils'
 
 type TopTeamProps = {

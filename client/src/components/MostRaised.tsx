@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card } from './Card'
-import { APIv2FundraisingPage } from '../../../types/fundraisingPage'
+import { APIv2FundraisingPage } from '../../../common/types/fundraisingPage'
 import { formatAsCurrency } from '../utils/utils'
 
 type MostRaisedProps = {

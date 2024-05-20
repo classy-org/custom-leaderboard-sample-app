@@ -5,14 +5,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:local": "concurrently \"cd ui && yarn start\" \"cd server && yarn start\"",
-    "prepare": "husky"
+    "eslint:check": "cd server && yarn eslint:check && cd ../client && yarn eslint:check",
+    "eslint:fix": "cd server && yarn eslint:fix && cd ../client && yarn eslint:fix",
+    "prettier:check": "cd server && yarn prettier:check && cd ../client && yarn prettier:check",
+    "prettier:fix": "cd server && yarn prettier:fix && cd ../client && yarn prettier:fix",
+    "install:all": "yarn install && cd server && yarn install && cd ../client && yarn install",
+    "start:local": "concurrently \"cd client && yarn start\" \"cd server && yarn start\""
   },
   "dependencies": {},
   "devDependencies": {
     "@commitlint/config-conventional": "18.4.3",
     "@commitlint/types": "18.4.3",
-    "concurrently": "^8.2.2",
-    "husky": "^8.0.3"
+    "concurrently": "^8.2.2"
   }
 }

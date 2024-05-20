@@ -2,11 +2,7 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   env: {
     node: true,
     jest: true,
@@ -34,16 +30,14 @@ module.exports = {
       },
       {
         selector: 'LabeledStatement',
-        message:
-          'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
       },
       {
         selector: 'WithStatement',
-        message:
-          '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
-    ], // override airbnb syntax rule for...of
+    ],
     curly: 'error', // enforces braces for if/for/do/while statements
     'class-methods-use-this': 'off',
   },
-}
+};
