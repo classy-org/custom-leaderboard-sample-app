@@ -15,7 +15,7 @@ the `/client` folder.
 
 The [Server](./server) folder leverages the [Express framework](https://expressjs.com/) as well as [Nodemon](https://nodemon.io/) to simplify development.
 
-### Client: SPA sss
+### Client: React SPA
 
 The [Client folder](./client) contains the React SPA to display the data retrieved from Classy's API by the backend.
 
