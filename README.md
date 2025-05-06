@@ -1,11 +1,11 @@
 # Custom Leaderboard
 
-This is a sample application that demonstrates how to create a custom leaderboard with your Classy data. It should be used purely as instructional material rather than a production-ready application. A great [support article](https://support.classy.org/s/article/building-fundraising-leaderboards-with-the-classy-api) further outlines and walks through what this application achieves.
+This is a sample application that demonstrates how to create a custom leaderboard with your GoFundMe Pro data. It should be used purely as instructional material rather than a production-ready application. A great [support article](https://support.classy.org/s/article/building-fundraising-leaderboards-with-the-classy-api) further outlines and walks through what this application achieves.
 
-Please refer to Classy's [developer documentation](https://developers.classy.org/overview/welcome) for more information about how to work with our product.
+Please refer to GoFundMe Pro's [developer documentation](https://developers.classy.org/overview/welcome) for more information about how to work with our product.
 
 This application shell makes use of a
-[Node backend layer](https://nodejs.org/en) to handle requests between the application and Classy's API as well as a [React frontend](https://react.dev/) to create a Client for the data retrieved from the customer's Classy account.
+[Node backend layer](https://nodejs.org/en) to handle requests between the application and GoFundMe Pro's API as well as a [React frontend](https://react.dev/) to create a Client for the data retrieved from the customer's GoFundMe Pro account.
 
 You can find the backend layer in the
 `/server` folder and the frontend part of the application in
@@ -17,7 +17,7 @@ The [Server](./server) folder leverages the [Express framework](https://expressj
 
 ### Client: React SPA
 
-The [Client folder](./client) contains the React SPA to display the data retrieved from Classy's API by the backend.
+The [Client folder](./client) contains the React SPA to display the data retrieved from GoFundMe Pro's API by the backend.
 
 ### Setup / Local Development
 
